@@ -6,3 +6,18 @@ Content-Type: application/json
     "email":"guatita@goku.com",
     "password":"123456"
 }
+
+### login sin conexion a bdd (arreglar no token)
+
+POST http://127.0.0.1:3000/auth/login
+Content-Type: application/json
+
+{
+    "name":"prueba",
+    "email":"admin@gmail.com",
+    "password":"123456"
+}
+
+### Users
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTU4NzQxMTEsImV4cCI6MTcxNTg3NDE3MX0.KLaTvS_g9douNuAkyAqn-TkMypMtmS3kQciQxKw8H7s
