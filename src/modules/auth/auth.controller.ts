@@ -14,5 +14,6 @@ export class AuthController {
         return userObj
     }
     @Post('login')
-    LoginAuthDto(@Body()credenciales: LoginAuthDto){}
+    
+    LoginAuthDto(@Body()credenciales: LoginAuthDto)
 }
