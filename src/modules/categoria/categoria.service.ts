@@ -1,16 +1,24 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateCategoriaDto } from './dto/create-categoria.dto';
 import { UpdateCategoriaDto } from './dto/update-categoria.dto';
+import { Repository } from 'typeorm';
+import { Categoria } from './entities/categoria.entity';
 
 @Injectable()
 export class CategoriaService {
+
+  constructor(@Inject('CATEGORIA_REPOSITORY') private categoriaRepository:Repository<Categoria>){}
   create(createCategoriaDto: CreateCategoriaDto) {
     return 'This action adds a new categoria';
   }
 
-  findAll() {
-    return `This action returns all categoria`;
+  async findAll(){
+    return await this.categoriaRepository.find();
   }
+
+  /*findAll() {
+    return `This action returns all categoria`;
+  }*/
 
   findOne(id: number) {
     return `This action returns a #${id} categoria`;
