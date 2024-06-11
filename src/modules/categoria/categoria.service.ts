@@ -17,22 +17,25 @@ export class CategoriaService {
   }
 
   async findAll(){
-    return await this.categoriaRepository.find();
+    return await this.categoriaRepository.find({order:{id:'asc'}});
   }
 
-  /*findAll() {
-    return `This action returns all categoria`;
-  }*/
+  
 
-  findOne(id: number) {
-    return `This action returns a #${id} categoria`;
+  async findOne(id: number) {
+    return await this.categoriaRepository.findOne({
+      where: {
+        id:id
+      }
+    });
+
   }
 
-  update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
-    return `This action updates a #${id} categoria`;
+  async update(id: number, updateCategoriaDto: UpdateCategoriaDto) {
+    return await this.categoriaRepository.update(id,updateCategoriaDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} categoria`;
+  async remove(id: number) {
+    return await this.categoriaRepository.delete(id);
   }
 }
