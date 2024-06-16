@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "name":"prueba",
-    "email":"guatita@goku.com",
+    "mail":"guatita@goku.com",
     "password":"123456"
 }
 
@@ -14,10 +14,15 @@ Content-Type: application/json
 
 {
     "name":"prueba",
-    "email":"admin@gmail.com",
+    "mail":"admin@gmail.com",
     "password":"123456"
 }
 
+###Este usuario jala 
+    "name":"prueba",
+    "mail":"guatita@goku.com",
+    "password":"123456"
+
 ### Users
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTU5MDMwOTMsImV4cCI6MTcxNTkwNjY5M30.OAgtCfKjvl0lxntzZV8JKi56uQvhlzrBmwsB2N5SPfw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTg1NTkwNzAsImV4cCI6MTcxODU2MjY3MH0.KdUhPEZGTiDy2W8Og-mkZCsdLhaQyeiMvZYaQ4BJqDI
