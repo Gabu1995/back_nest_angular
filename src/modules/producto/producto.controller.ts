@@ -1,11 +1,14 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Req, UseGuards } from '@nestjs/common';
 import { ProductoService } from './producto.service';
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { Request } from 'express';
 import { last } from 'rxjs';
+import { jwtAuthGuard } from '../auth/jwt-auth.guard';
 
+@UseGuards(jwtAuthGuard) //con esto ya no podemos acceder a productos
+@ApiBearerAuth() //esto es pal swagger
 @ApiTags('producto')
 @Controller('producto')
 export class ProductoController {
